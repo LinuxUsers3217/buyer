@@ -8,13 +8,15 @@ sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 wget -O windows10.img 'https://bom.so/8zuQCh'
+wget -O win10.iso 'https://dl.malwarewatch.org/windows/mods/Tiny%2010.iso'
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 8G \
+  -m 4G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows10.img,format=raw,if=virtio \
+  -drive file=win10.iso,media=cdrom \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
   -vnc :0 \
