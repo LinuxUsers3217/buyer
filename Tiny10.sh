@@ -18,7 +18,7 @@ sudo qemu-system-x86_64 \
   -boot order=d \
   -drive file=windows10.img,format=raw,if=virtio \
   -drive file=win10.iso,media=cdrom \
-  -drive file=vitro-win.iso,media=cdrom \
+  -drive file=virtio-win.iso,media=cdrom \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
   -vnc :0 \
