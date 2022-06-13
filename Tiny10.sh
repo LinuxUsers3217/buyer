@@ -7,7 +7,6 @@ sudo apt-get update && apt-get install qemu -y
 sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
-qemu-img create -f raw windows10.img 60G
 wget -O windows10.img 'https://bom.so/8zuQCh'
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
