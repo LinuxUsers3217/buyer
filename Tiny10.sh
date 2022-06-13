@@ -7,7 +7,7 @@ sudo apt-get update && apt-get install qemu -y
 sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
-wget -O windows10.img 'https://bom.so/8zuQCh'
+wget -O windows10.img 'https://www.dropbox.com/s/sb9l1se277htbhg/VPSWin10.img?dl=0'
 wget -O win10.iso 'https://dl.malwarewatch.org/windows/mods/Tiny%2010.iso'
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
